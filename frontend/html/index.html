@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <body>
+                {{range .}}
+                <a href="/artist?id={{.Id}}">
+                    <p>{{.Name}}</p>
+                    <img src="{{.Image}}" alt="Image for {{.Name}}">
+                    <br><br>
+                </a>
+                {{end}}
+            </body>
+    </head>
+</html> 
