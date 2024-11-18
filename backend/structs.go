@@ -10,9 +10,29 @@ type Artist struct {
 	LocationsAPI    string   `json:"locations"`
 	ConcertDatesAPI string   `json:"concertDates"`
 	RelationsAPI    string   `json:"relations"`
-	Locations       []string
-	ConcertDates    []string
-	Relations       map[string][]string
+	Locations       Locations
+	ConcertDates    ConcertDates
+	Relations       Relations
 }
 
-var Artists []Artist
+type Locations struct {
+	Id       int      `json:"id"`
+	Location []string `json:"locations"`
+}
+
+type ConcertDates struct {
+	Id    int      `json:"id"`
+	Dates []string `json:"dates"`
+}
+
+type Relations struct {
+	Id        int                 `json:"id"`
+	Relations map[string][]string `json:"datesLocations"`
+}
+
+var (
+	Artists []Artist
+	Slocations []Locations
+	SconcertDates []ConcertDates
+	Srelations []Relations
+)

@@ -7,7 +7,7 @@ import (
 )
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	tpl, err := template.ParseFiles("../../frontend/html/index.html")
+	tpl, err := template.ParseFiles("../frontend/html/index.html")
 	if err != nil {
 		fmt.Println("Error parsing the file :", err)
 		return

@@ -4,31 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groupie-Tracker-Artists</title>
+    <style>
+        body {
+            overflow-y: auto;
+        }
+
+        .members {
+            width: 80%;
+            text-align: center;
+            align-content: center;
+            border: 3px solid #942f2f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+            background-color: #ffffff;
+            margin: auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .dates {
+            width: 80%;
+            text-align: center;
+            align-content: center;
+            border: 3px solid #942f2f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+            background-color: #ffffff;
+            margin: auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .locations {
+            width: 80%;
+            text-align: center;
+            align-content: center;
+            border: 3px solid #942f2f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+            background-color: #ffffff;
+            margin: auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .albums {
+            width: 80%;
+            text-align: center;
+            align-content: center;
+            border: 3px solid #942f2f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+            background-color: #ffffff;
+            margin: auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .dates {
+            width: 80%;
+            text-align: center;
+            align-content: center;
+            border: 3px solid #942f2f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+            background-color: #ffffff;
+            margin: auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .relations {
+            width: 80%;
+            text-align: center;
+            align-content: center;
+            border: 3px solid #942f2f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+            background-color: #ffffff;
+            margin: auto;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .heading {
+            text-align: center;
+            align-content: center;
+        }
+        .image {
+            text-align: center;
+            align-content: center;
+            border: 0px;
+            border-radius: 10%;
+        }
+        .card {
+            text-align: center;
+            align-content: center;
+        }
+        .infos {
+            text-align: center;
+            align-content: center;
+        }
+    </style>
 </head>
 <body> 
     
-    <center>
         <div class="heading">
-            <h1>Groupie-Tracker</h1>
+            <h1>{{.Name}}</h1>
             <hr>
         </div>
 
         <div class="card">
-            <div style="float: left;">
-                <img src="{{.Image}}" alt="{{.Name}}" class="image"/>  <!--if [src] not exesiste [alt] work-->
-            </div>
+                <img src="{{.Image}}" alt="{{.Name}}" class="image"/> 
             
-            <div style="float: left; text-align: left;">
-                <h2>{{.Name}}</h2>
-                <p><b>Members: </b><br>{{range .Members}}{{.}}</p>{{end}}
-                <p><b>CreationDate: </b>{{.CreationDate}}</p>
-                <p><b>FirstAlbum: </b>{{.FirstAlbum}}</p>
-                <p><b>Location: </b>{{.Locations}}</p>
-                <p><b>Dates: </b>{{.ConcertDates}}</p>
-                <p><b>Relations: </b>{{.Relations}} </p>
-            </div>
+                <div class="infos">
+                    <div class="members">
+                      <p><b>Members:</b></p>
+                      <ul>
+                        {{range .Members}} <br>
+                          {{.}}
+                        {{end}}
+                      </ul>
+                    </div>
+                    <br>
+                    <p class="dates"><b>Creation Date:</b> {{.CreationDate}}</p>
+                    <br>
+                    <p class="albums"><b>First Album:</b> {{.FirstAlbum}}</p>
+                    <br>
+
+                    <div class="locations">
+                      <p><b>Locations:</b></p>
+                      <ul>
+                        {{range .Locations.Location}}
+                          {{.}} <br>
+                        {{end}}
+                      </ul>
+                    </div>
+                    <br>
+                    
+                    <div class="dates">
+                      <p><b>Concert Dates:</b></p>
+                      <ul>
+                        {{range .ConcertDates.Dates}}
+                          {{.}} <br>
+                        {{end}}
+                      </ul>
+                    </div>
+                    <br>
+                    
+                    <div class="relations">
+                      <p><b>Relations:</b></p>
+                      <ul>
+                        {{range $key, $value := .Relations.Relations}}
+                          <b>{{ $key }}</b>: {{range $value}}{{.}}, {{end}} <br>
+                        {{end}}
+                      </ul>
+                    </div>
+                  </div>
+                  
         </div>
-    </center>
         
 </body>
 </html>
