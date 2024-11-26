@@ -1,0 +1,93 @@
+body {
+    overflow-y: auto;
+}
+
+.members {
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    border: 3px solid #942f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    background-color: #ffffff;
+    margin: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dates {
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    border: 3px solid #942f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    background-color: #ffffff;
+    margin: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.locations {
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    border: 3px solid #942f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    background-color: #ffffff;
+    margin: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.albums {
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    border: 3px solid #942f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    background-color: #ffffff;
+    margin: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dates {
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    border: 3px solid #942f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    background-color: #ffffff;
+    margin: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.relations {
+    width: 80%;
+    text-align: center;
+    align-content: center;
+    border: 3px solid #942f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
+    background-color: #ffffff;
+    margin: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.heading {
+    text-align: center;
+    align-content: center;
+}
+.image {
+    text-align: center;
+    align-content: center;
+    border: 0px;
+    border-radius: 10%;
+}
+.card {
+    text-align: center;
+    align-content: center;
+}
+.infos {
+    text-align: center;
+    align-content: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/my-css/artist.css"> 
+    <title>Groupie-Tracker-Artists</title>
+
+</head>
+<body> 
+    
+        <div class="heading">
+            <h1>{{.Name}}</h1>
+            <hr>
+        </div>
+
+        <div class="card">
+                <img src="{{.Image}}" alt="{{.Name}}" class="image"/> 
+            
+                <div class="infos">
+                    <div class="members">
+                      <p><b>Members:</b></p>
+                      <ul>
+                        {{range .Members}} <br>
+                          {{.}}
+                        {{end}}
+                      </ul>
+                    </div>
+                    <br>
+                    <p class="dates"><b>Creation Date:</b> {{.CreationDate}}</p>
+                    <br>
+                    <p class="albums"><b>First Album:</b> {{.FirstAlbum}}</p>
+                    <br>
+
+                    <div class="locations">
+                      <p><b>Locations:</b></p>
+                      <ul>
+                        {{range .Locations.Location}}
+                          {{.}} <br>
+                        {{end}}
+                      </ul>
+                    </div>
+                    <br>
+                    
+                    <div class="dates">
+                      <p><b>Concert Dates:</b></p>
+                      <ul>
+                        {{range .ConcertDates.Dates}}
+                          {{.}} <br>
+                        {{end}}
+                      </ul>
+                    </div>
+                    <br>
+                    
+                    <div class="relations">
+                      <p><b>Relations:</b></p>
+                      <ul>
+                        {{range $key, $value := .Relations.Relations}}
+                          <b>{{ $key }}</b>: {{range $value}}{{.}}, {{end}} <br>
+                        {{end}}
+                      </ul>
+                    </div>
+                  </div>
+                  
+        </div>
+        
+</body>
+</html>

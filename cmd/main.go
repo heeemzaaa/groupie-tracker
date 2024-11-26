@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	g "groupie/backend"
+	g "groupie/internal"
 )
 
 func init() {
@@ -13,12 +13,12 @@ func init() {
 
 func main() {
 	var err error
-	g.Tpl, err = g.Tpl.ParseGlob("../frontend/html/*.html")
+	g.Tpl, err = g.Tpl.ParseGlob("../templates/*.html")
 	if err != nil {
 		fmt.Println("Error Parsing:", err)
 		return
 	}
-	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("../frontend/css"))))
+	http.HandleFunc("/my-css/", g.CssHandler)
 	http.HandleFunc("/", g.HomeHandler)
 	http.HandleFunc("/artist", g.ArtistHandler)
 	fmt.Println("http://localhost:8080")

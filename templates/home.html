@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/my-css/home.css"> 
+        <body>
+            <div class="card-container">
+                {{range .}}
+                <a href="/artist?id={{.Id}}">
+                    <div class="card">
+                    <img src="{{.Image}}" alt="Image for {{.Name}}" class="card-image">
+                                <p>{{.Name}}</p>
+                            </div>
+                            <br><br>
+                        </a>
+                        {{end}}
+            </div>
+           
+            </body>
+    </head>
+</html> 

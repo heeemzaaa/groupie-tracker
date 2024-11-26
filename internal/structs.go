@@ -1,5 +1,7 @@
 package groupie
 
+import "html/template"
+
 type Artist struct {
 	Id              int      `json:"id"`
 	Image           string   `json:"image"`
@@ -31,8 +33,9 @@ type Relations struct {
 }
 
 var (
-	Artists []Artist
-	Slocations []Locations
+	Artists       []Artist
+	Slocations    []Locations
 	SconcertDates []ConcertDates
-	Srelations []Relations
+	Srelations    []Relations
+	Tpl           *template.Template
 )
