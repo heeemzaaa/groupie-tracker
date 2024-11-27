@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// this function serves the css file 
 func CssHandler(w http.ResponseWriter, r *http.Request) {
 	if len(r.URL.Path) < len("/my-css/") || r.URL.Path[:len("/my-css/")] != "/my-css/" {
 		http.Error(w, "403 Forbidden", http.StatusForbidden)

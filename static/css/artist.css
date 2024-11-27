@@ -1,93 +1,104 @@
 body {
     overflow-y: auto;
+    background-color: #000814;
+    justify-content: center;
 }
 
-.members {
+.artist {
     width: 80%;
     text-align: center;
     align-content: center;
-    border: 3px solid #942f2f;
+    justify-content: center;
+    border: 3px solid #FFC300;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
-    background-color: #ffffff;
-    margin: auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #001D3D;
+    margin: 20px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.dates {
-    width: 80%;
-    text-align: center;
-    align-content: center;
-    border: 3px solid #942f2f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
-    background-color: #ffffff;
-    margin: auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.artist h3 {
+    color: #FFC300;
 }
 
-.locations {
-    width: 80%;
-    text-align: center;
-    align-content: center;
-    border: 3px solid #942f2f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
-    background-color: #ffffff;
-    margin: auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.artist p {
+    color: #F5EBE0;
+
 }
 
-.albums {
-    width: 80%;
-    text-align: center;
-    align-content: center;
-    border: 3px solid #942f2f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
-    background-color: #ffffff;
-    margin: auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.artist b {
+    color: #D6CCC2;
 }
 
-.dates {
-    width: 80%;
-    text-align: center;
-    align-content: center;
-    border: 3px solid #942f2f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
-    background-color: #ffffff;
-    margin: auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.relations {
-    width: 80%;
-    text-align: center;
-    align-content: center;
-    border: 3px solid #942f2f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0,0.1);
-    background-color: #ffffff;
-    margin: auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
 .heading {
     text-align: center;
     align-content: center;
+    justify-content: center;
+    color: #FFD60A;
 }
+
 .image {
     text-align: center;
     align-content: center;
-    border: 0px;
+    border: 3px solid #FFC300;
     border-radius: 10%;
 }
+
 .card {
     text-align: center;
     align-content: center;
 }
-.infos {
-    text-align: center;
+
+.back {
+    border: 2px solid #FFC300;
+    border-radius: 8px;
+    justify-content: left;
+}
+
+.home {
+    text-decoration: none;
+    justify-content: center;
     align-content: center;
+    text-align: center;
+}
+
+.ok {
+    padding-top: 20px;
+    padding: 0.8em 1.8em;
+    border: 2px solid #FFC300;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #F5EBE0;
+    text-decoration: none;
+}
+
+.ok::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #c38d17;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.ok:hover::before {
+    width: 105%;
+    border-radius: 8px;
+}
+
+.ok:hover {
+    color: #001D3D;
 }

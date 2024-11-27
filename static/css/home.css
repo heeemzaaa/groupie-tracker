@@ -1,30 +1,42 @@
+body {
+    background-color: #000814;
+    overflow-y: auto;
+   
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 50px;
+    justify-content: center;
 }
 .card {
     width: 300px;
-    border: 5px solid #942f2f; 
+    border: 5px solid #FFC300; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     overflow: hidden; 
-    background-color: #ffffff; 
+    background-color: #001D3D; 
+    align-content: center;
     text-align: center;
 }
 
 p {
     font-size: large;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(48, 48, 48);
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    color: solid #67AAF9;
     align-content: center;
 }
 
 .card-image {
+    border: 2px solid #FFC300;
     border-radius: 8px;
     align-content: center;
     margin-top: 20px;
 }
 
-
+.card-link {
+    text-decoration: none;
+    color: #67AAF9;
+}
   

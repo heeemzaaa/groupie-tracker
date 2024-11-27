@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/my-css/artist.css"> 
-    <title>Groupie-Tracker-Artists</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/my-css/artist.css">
+  <title>Groupie-Tracker-Artists</title>
 
 </head>
-<body> 
-    
-        <div class="heading">
-            <h1>{{.Name}}</h1>
-            <hr>
-        </div>
 
-        <div class="card">
-                <img src="{{.Image}}" alt="{{.Name}}" class="image"/> 
-            
-                <div class="infos">
-                    <div class="members">
-                      <p><b>Members:</b></p>
-                      <ul>
-                        {{range .Members}} <br>
-                          {{.}}
-                        {{end}}
-                      </ul>
-                    </div>
-                    <br>
-                    <p class="dates"><b>Creation Date:</b> {{.CreationDate}}</p>
-                    <br>
-                    <p class="albums"><b>First Album:</b> {{.FirstAlbum}}</p>
-                    <br>
+<body>
+  <div>
+    <a  class="ok" href="../">GO BACK</a>
+</div>
+  <div class="heading">
+    <h1>{{.Name}}</h1>
+  </div>
 
-                    <div class="locations">
-                      <p><b>Locations:</b></p>
-                      <ul>
-                        {{range .Locations.Location}}
-                          {{.}} <br>
-                        {{end}}
-                      </ul>
-                    </div>
-                    <br>
-                    
-                    <div class="dates">
-                      <p><b>Concert Dates:</b></p>
-                      <ul>
-                        {{range .ConcertDates.Dates}}
-                          {{.}} <br>
-                        {{end}}
-                      </ul>
-                    </div>
-                    <br>
-                    
-                    <div class="relations">
-                      <p><b>Relations:</b></p>
-                      <ul>
-                        {{range $key, $value := .Relations.Relations}}
-                          <b>{{ $key }}</b>: {{range $value}}{{.}}, {{end}} <br>
-                        {{end}}
-                      </ul>
-                    </div>
-                  </div>
-                  
-        </div>
-        
+  <div class="card">
+    <img src="{{.Image}}" alt="{{.Name}}" class="image" />
+
+    <div class="infos">
+      <div class="artist">
+        <h3>Members:</h3>
+        {{range .Members}}
+        <p> {{.}}</p>
+        {{end}}
+      </div>
+      <div class="artist">
+        <h3>Creation Date:</h3>
+        <p>{{.CreationDate}}</p>
+      </div>
+      <div class="artist">
+        <h3>First Album:</h3>
+        <p>{{.FirstAlbum}}</p>
+      </div>
+
+      <div class="artist">
+        <h3>Locations:</h3>
+        {{range .Locations.Location}}
+        <p>{{.}}</p>
+        {{end}}
+      </div>
+
+      <div class="artist">
+        <h3>Concert Dates:</h3>
+        {{range .ConcertDates.Dates}}
+        <p>{{.}}</p>
+        {{end}}
+
+      </div>
+
+      <div class="artist">
+        <h3>Relations:</h3>
+        {{range $key, $value := .Relations.Relations}}
+        <span><b>{{ $key }}</b> </span>: {{range $value}} <p>-{{.}}</p> {{end}}
+        {{end}}
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
