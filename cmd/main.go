@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	g "groupie/internal"
@@ -22,5 +23,5 @@ func main() {
 	http.HandleFunc("/", g.HomeHandler)
 	http.HandleFunc("/artist", g.ArtistHandler)
 	fmt.Println("http://localhost:8080")
-	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
