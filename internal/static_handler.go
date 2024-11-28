@@ -1,7 +1,6 @@
 package groupie
 
 import (
-	"fmt"
 	"net/http"
 	"os"
 	"strings"
@@ -17,7 +16,6 @@ func HandleAssets(w http.ResponseWriter, r *http.Request) {
 		ErrorPage(w, http.StatusNotFound, "Statut not found !")
 		return
 	} else {
-		fmt.Println(r.URL.Path)
 		infos, err := os.Stat(r.URL.Path[1:])
 		if err != nil {
 			ErrorPage(w, http.StatusNotFound, "Statut not found !")

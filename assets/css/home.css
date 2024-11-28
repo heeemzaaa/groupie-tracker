@@ -1,7 +1,16 @@
 body {
     background-color: #000814;
     overflow-y: auto;
+    gap: 30px;
    
+}
+
+.title {
+    color: #FFC300;
+    font-size:300%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 }
 
 .card-container {
