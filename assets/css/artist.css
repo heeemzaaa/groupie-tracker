@@ -2,6 +2,7 @@ body {
     overflow-y: auto;
     background-color: #000814;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .artist {
@@ -88,7 +89,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #c38d17;
+    background: #001D3D;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -100,5 +101,5 @@ body {
 }
 
 .ok:hover {
-    color: #001D3D;
+    color:beige ;
 }

@@ -39,3 +39,9 @@ var (
 	Srelations    []Relations
 	Tpl           *template.Template
 )
+
+type ErrorData struct {
+	StatusCode int
+	Message    string
+}
+

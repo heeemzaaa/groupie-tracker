@@ -1,7 +1,6 @@
 package groupie
 
 import (
-	"fmt"
 	"net/http"
 	"strconv"
 )
@@ -12,7 +11,7 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(IdStr)
 
 	if err != nil || id > len(Artists) {
-		fmt.Println("error getting id")
+		ErrorPage(w, 400, "Bad Request !")
 		return
 	}
 	FetchData(Artists[id-1].LocationsAPI, &Artists[id-1].Locations)
@@ -21,7 +20,7 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 	data := Artists[id-1]
 	err = Tpl.ExecuteTemplate(w, "artist.html", data)
 	if err != nil {
-		fmt.Println("Error executing the file :", err)
+		ErrorPage(w, 500, "Internal server error !")
 		return
 	}
 }
