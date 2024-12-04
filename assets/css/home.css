@@ -2,12 +2,12 @@ body {
     background-color: #000814;
     overflow-y: auto;
     gap: 30px;
-   
+    width: 100%;
 }
 
 .title {
     color: #FFC300;
-    font-size:300%;
+    font-size: 2rem;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -18,21 +18,24 @@ body {
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
+    margin: auto;
+    width: 90%;
 }
+
 .card {
     width: 300px;
-    border: 5px solid #FFC300; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
-    background-color: #001D3D; 
+    border: 5px solid #FFC300;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #001D3D;
     align-content: center;
     text-align: center;
 }
 
 p {
     font-size: large;
-    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: solid #67AAF9;
     align-content: center;
 }
@@ -48,4 +51,3 @@ p {
     text-decoration: none;
     color: #67AAF9;
 }
-  
