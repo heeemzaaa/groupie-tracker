@@ -10,7 +10,7 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 	IdStr := r.FormValue("id")
 	id, err := strconv.Atoi(IdStr)
 
-	if err != nil || id > len(Artists) {
+	if err != nil || id > len(Artists) || id <= 0 {
 		ErrorPage(w, 400, "Bad Request !")
 		return
 	}
