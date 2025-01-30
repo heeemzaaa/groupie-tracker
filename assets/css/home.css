@@ -6,12 +6,18 @@ body {
 }
 
 .title {
-    color: #FFC300;
-    font-size: 2rem;
-    justify-content: center;
-    align-content: center;
     text-align: center;
+    margin: 30px;
 }
+
+.home {
+    text-decoration: none;
+    color: #FFC300;
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    transform: rotate(-3deg);
+}
+
 
 .card-container {
     display: flex;
@@ -31,6 +37,12 @@ body {
     background-color: #001D3D;
     align-content: center;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1) perspective(1000px) translateZ(10px);
 }
 
 p {

@@ -5,6 +5,19 @@ body {
     margin-top: 30px;
 }
 
+.title {
+    text-align: center;
+    margin: 30px;
+}
+
+.home {
+    text-decoration: none;
+    color: #FFC300;
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    transform: rotate(-3deg);
+}
+
 .artist {
     width: 80%;
     text-align: center;
@@ -63,7 +76,15 @@ body {
     text-align: center;
 }
 
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .ok {
+    display: inline-block;
+
     padding-top: 20px;
     padding: 0.8em 1.8em;
     border: 2px solid #FFC300;
@@ -101,5 +122,5 @@ body {
 }
 
 .ok:hover {
-    color:beige ;
+    color: beige;
 }

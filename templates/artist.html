@@ -4,15 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Rock+Salt&family=Special+Elite&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/artist.css">
-  <title>Artists</title>
+  <title>{{.Name}}</title>
 
 </head>
 
 <body>
-  <div>
-    <a class="ok" href="../">GO BACK</a>
+  <div class="title">
+    <a href="/" class="home">
+      GROUPIE-TRACKER
+    </a>
   </div>
+
+
   <div class="heading">
     <h1>{{.Name}}</h1>
   </div>
@@ -58,6 +67,10 @@
         {{end}}
       </div>
     </div>
+  </div>
+
+  <div class="button-container">
+    <a class="ok" href="/">GO BACK</a>
   </div>
 </body>
 
